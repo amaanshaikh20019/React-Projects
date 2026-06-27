@@ -5,26 +5,19 @@ import heroImg from "./assets/hero.png";
 import "./App.css";
 
 function App() {
-  const [counter, setCounter] = useState(15);
-
-  // let counter = 15
-
+  const [counter, setCounter] = useState(0);
   const addValue = () => {
     setCounter(counter + 1);
   };
-
-  const removeValue = () => {
+  const Reduce = () => {
     setCounter(counter - 1);
   };
-
   return (
     <>
-      <h1>Chai Aur React</h1>
-      <h2>Counter Value:{counter}</h2>
-
-      <button onClick={addValue}>Add Value{counter}</button>
-      <button onClick={removeValue}>Decrease value{counter}</button>
-      <p>footer:{counter}</p>
+      <h1>Counter App</h1>
+      <button onClick={addValue}>Add Value:{counter}</button>
+      <button onClick={Reduce}>Reduce Value:{counter}</button>
+      <button>Current Value:{counter}</button>
     </>
   );
 }
